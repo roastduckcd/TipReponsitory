@@ -15,6 +15,7 @@
 		6182D0261FAFE6B600498949 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6182D0251FAFE6B600498949 /* main.m */; };
 		6182D0301FAFE6B600498949 /* UIViewAndSubviewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6182D02F1FAFE6B600498949 /* UIViewAndSubviewsTests.m */; };
 		6182D03B1FAFE6B600498949 /* UIViewAndSubviewsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6182D03A1FAFE6B600498949 /* UIViewAndSubviewsUITests.m */; };
+		6182D04C1FAFE77100498949 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6182D04B1FAFE77100498949 /* MyView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		6182D0361FAFE6B600498949 /* UIViewAndSubviewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIViewAndSubviewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6182D03A1FAFE6B600498949 /* UIViewAndSubviewsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIViewAndSubviewsUITests.m; sourceTree = "<group>"; };
 		6182D03C1FAFE6B600498949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6182D04A1FAFE77100498949 /* MyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
+		6182D04B1FAFE77100498949 /* MyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,15 +104,14 @@
 		6182D0151FAFE6B600498949 /* UIViewAndSubviews */ = {
 			isa = PBXGroup;
 			children = (
-				6182D0161FAFE6B600498949 /* AppDelegate.h */,
-				6182D0171FAFE6B600498949 /* AppDelegate.m */,
 				6182D0191FAFE6B600498949 /* ViewController.h */,
 				6182D01A1FAFE6B600498949 /* ViewController.m */,
-				6182D01C1FAFE6B600498949 /* Main.storyboard */,
-				6182D01F1FAFE6B600498949 /* Assets.xcassets */,
-				6182D0211FAFE6B600498949 /* LaunchScreen.storyboard */,
-				6182D0241FAFE6B600498949 /* Info.plist */,
-				6182D0251FAFE6B600498949 /* main.m */,
+				6182D04A1FAFE77100498949 /* MyView.h */,
+				6182D04B1FAFE77100498949 /* MyView.m */,
+				6182D0491FAFE70000498949 /* Storyboard */,
+				6182D0481FAFE6D500498949 /* Resources */,
+				6182D0161FAFE6B600498949 /* AppDelegate.h */,
+				6182D0171FAFE6B600498949 /* AppDelegate.m */,
 			);
 			path = UIViewAndSubviews;
 			sourceTree = "<group>";
@@ -130,6 +132,25 @@
 				6182D03C1FAFE6B600498949 /* Info.plist */,
 			);
 			path = UIViewAndSubviewsUITests;
+			sourceTree = "<group>";
+		};
+		6182D0481FAFE6D500498949 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6182D01F1FAFE6B600498949 /* Assets.xcassets */,
+				6182D0241FAFE6B600498949 /* Info.plist */,
+				6182D0251FAFE6B600498949 /* main.m */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6182D0491FAFE70000498949 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				6182D01C1FAFE6B600498949 /* Main.storyboard */,
+				6182D0211FAFE6B600498949 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6182D04C1FAFE77100498949 /* MyView.m in Sources */,
 				6182D01B1FAFE6B600498949 /* ViewController.m in Sources */,
 				6182D0261FAFE6B600498949 /* main.m in Sources */,
 				6182D0181FAFE6B600498949 /* AppDelegate.m in Sources */,
@@ -432,7 +454,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FBVYKESUN4;
-				INFOPLIST_FILE = UIViewAndSubviews/Info.plist;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/UIViewAndSubviews/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yangsong.UIViewAndSubviews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -446,7 +469,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FBVYKESUN4;
-				INFOPLIST_FILE = UIViewAndSubviews/Info.plist;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/UIViewAndSubviews/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yangsong.UIViewAndSubviews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -465,7 +489,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yangsong.UIViewAndSubviewsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIViewAndSubviews.app/UIViewAndSubviews";
+				TEST_HOST = "";
 			};
 			name = Debug;
 		};
@@ -480,13 +504,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yangsong.UIViewAndSubviewsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIViewAndSubviews.app/UIViewAndSubviews";
 			};
 			name = Release;
 		};
 		6182D0461FAFE6B600498949 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UIViewAndSubviews.app/UIViewAndSubviews";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FBVYKESUN4;
 				INFOPLIST_FILE = UIViewAndSubviewsUITests/Info.plist;
@@ -494,6 +518,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yangsong.UIViewAndSubviewsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "";
 				TEST_TARGET_NAME = UIViewAndSubviews;
 			};
 			name = Debug;
@@ -508,6 +533,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yangsong.UIViewAndSubviewsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				TEST_TARGET_NAME = UIViewAndSubviews;
 			};
 			name = Release;
