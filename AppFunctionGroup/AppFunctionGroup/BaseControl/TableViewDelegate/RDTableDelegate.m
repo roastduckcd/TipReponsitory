@@ -8,6 +8,12 @@
 
 #import "RDTableDelegate.h"
 
+#import "IBManager.h"
+#import "LeftViewController.h"
+#import "CenterViewController.h"
+#import "RightViewController.h"
+
+
 @implementation RDTableDelegate
 
 - (instancetype)init {
@@ -20,6 +26,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
+    CenterViewController *center = [[CenterViewController alloc] initWithNibName:@"CenterViewController" bundle:[NSBundle mainBundle]]; //[IBManager instanceViewControllerWithNibName:@"CenterViewController"];
+    LeftViewController *left = [IBManager instanceViewControllerWithStoryboardID:@"LeftViewController" inStoryboard:@"SideBar"];
+    RightViewController *right = [IBManager instanceViewControllerWithStoryboardID:@"RightViewController" inStoryboard:@"SideBar"];
+
+    IIViewDeckController *vc = [[IIViewDeckController alloc] initWithCenterViewController:center leftViewController:left rightViewController:right];
+
+    self.modalBlock(vc);
 }
 
 //- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {

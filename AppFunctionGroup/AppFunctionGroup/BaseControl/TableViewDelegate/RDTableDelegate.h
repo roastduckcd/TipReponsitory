@@ -9,8 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#import <ViewDeck/ViewDeck.h>
+
+typedef void(^ShowModalBlock)(IIViewDeckController *vc);
+
 @interface RDTableDelegate : NSObject <UITableViewDelegate>
 
+@property (nonatomic, copy) ShowModalBlock modalBlock;
 
 
 @end

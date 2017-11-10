@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+
 #import "RDTableDelegate.h"
 #import "RDTableDatasource.h"
 
@@ -33,6 +34,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+//    self.navigationController.in  teractivePopGestureRecognizer.delegate = nil;
+
     [self.view addSubview:self.tableView];
 }
 
@@ -49,6 +52,17 @@
 //        self.tableView.delegate = [[RDTableDelegate alloc] init];
         // self.delegate 使引用计数又加1，对象引用计数为1
         self.tableView.delegate = self.delegate;
+
+        __weak typeof(self) weakSelf = self;
+        self.delegate.modalBlock = ^(IIViewDeckController *vc) {
+            /*
+             *  与NavigationController的左滑返回冲突
+             *  如果取消左滑返回，会造成pop到首页后，左滑，再点击cell无反应
+             *  使用present规避，如需push效果，需要重写。
+             */
+//            [weakSelf.navigationController pushViewController:vc animated:YES];
+            [weakSelf presentViewController:vc animated:YES completion:nil];
+        };
 
         // 和viewforfootview方法 不同效果？？？？
         self.tableView.tableFooterView = [[UIView alloc] init];
